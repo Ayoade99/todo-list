@@ -64,6 +64,7 @@ form {
 form input {
   border-radius: 10px 0 0 10px;
 }
+
 form input,
 form button {
   padding: 0.5rem;
@@ -153,29 +154,6 @@ form button:hover {
   animation: fall-animation 1s ease-in-out forwards;
 }
 
-/* @keyframes fall-animation {
-  0% {
-    opacity: 0.8;
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(-5px);
-  }
-  40% {
-    transform: translateY(0px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-  80% {
-    transform: translateY(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-} */
-
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
@@ -199,6 +177,7 @@ select option {
   font-weight: 600;
   border-radius: none;
 }
+
 .select {
   margin: 1rem;
   position: relative;
@@ -215,4 +194,156 @@ select option {
   color: var(--color-2);
   pointer-events: none;
   transition: all 0.3s ease;
+}
+
+
+/* Tablet Screen */
+
+
+@media screen and (max-width: 1024px) {
+  
+  header {
+    margin-left: 2rem;
+    width: 90vw;
+    height: 80vh;
+ }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+  
+  form input{
+    margin-left: 1rem;
+  }
+
+  header {
+     margin-left: 2rem;
+     width: 90vw;
+     height: 70vh;
+  } 
+
+  .todo-list li {
+    font-size: 1rem;
+    width: 70vw;
+    padding-right: 0.3rem;
+ }
+
+ .fa-xmark,
+ .fa-check {
+    font-size: 1rem;
+}
+
+select {
+    padding-top: 1.3rem;
+}
+  
+}
+
+
+/* Mobile Screen */
+
+
+@media screen and (max-width: 425px) {
+  
+  form input {
+     font-size: 1.5rem;
+     padding: 0.5rem;
+     width: 10rem;
+  }
+
+  .todo-button {
+     font-size: 1rem;
+     padding: 0.8rem;
+  }
+
+  .select {
+    margin: 0.2rem;
+    padding: 0.2rem;
+  }
+
+  select {
+    width: 6.2rem;
+  }
+
+  .todo-list li {
+    font-size: 0.7rem;
+    width: 65vw;
+    padding-right: 0.3rem;
+ }
+
+ .fa-xmark,
+ .fa-check {
+    font-size: 0.5rem;
+}
+
+  
+}
+
+
+@media screen and (max-width: 375px) {
+  
+
+  form input {
+    font-size: 1rem;
+    padding: 0.8rem;
+    width: 8rem;
+  }
+
+  select {
+    width: 5.2rem;
+    padding-top: 1.1rem;
+  }
+
+  .validate-todo {
+      padding-left: 0.5rem;
+      width: 5rem;
+  }
+
+  header {
+    margin-left: 1rem;
+  }
+
+  .todo-list li {
+    font-size: 0.7rem;
+    width: 60vw;
+    padding-right: 0.3rem;
+ }
+
+ .fa-xmark,
+ .fa-check {
+    font-size: 0.5rem;
+}
+
+
+}
+
+
+@media screen and (max-width: 320px) {
+
+  form input {
+    width: 6rem;
+    margin-left: 0.5rem;
+  }
+
+  .validate-todo {
+    width: 4rem;
+  }
+
+  select {
+    font-size: 0.9rem;
+  }
+
+  .todo-list li {
+     font-size: 0.6rem;
+     width: 60vw;
+     padding-right: 0.3rem;
+  }
+
+  .fa-xmark,
+  .fa-check {
+     font-size: 0.5rem;
+}
+  
 }
